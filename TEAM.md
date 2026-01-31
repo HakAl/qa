@@ -1,7 +1,7 @@
 # Team Protocol
 
-**Status**: Self-Organizing
-**Genesis**: Awaiting
+**Status**: Operational
+**Genesis**: 2026-01-31
 
 ## Prime Directive
 
@@ -55,6 +55,16 @@ The team works because members can hear each other and collaborate. Running them
 ## Operating Protocols
 
 *Bootstrapped by Cora. Challenged by Sam. Validated by Clara. 2026-01-31.*
+*Iteration 1: 2026-01-31 — Added Session Start, Cadences. Fixed stale genesis markers.*
+
+### 0. Session Start
+
+Every session begins with:
+1. Read `TEAM.md` for current protocols and state
+2. Check dispatch inbox (`~/.team/dispatch/qa/new/`) — surface pending dispatches
+3. Check cadence table — send due dispatches
+4. Check open issues (`bd ready`) — resume in-progress work
+5. Proceed with session work or new tasks
 
 ### 1. Task Intake
 
@@ -94,6 +104,16 @@ The team works because members can hear each other and collaborate. Running them
 - At session end: file issues for remaining work, push to remote (MANDATORY)
 - Next session starts with: read TEAM.md, check open issues, resume
 - Work is NOT done until `git push` succeeds
+
+### 7. Cadences
+
+| Dispatch | To | Frequency | Last Sent | Notes |
+|----------|----|-----------|-----------|-------|
+| Dependency security audit | *(internal)* | weekly | *(never)* | Sam scans project deps |
+| Cross-platform smoke test | *(internal)* | weekly | *(never)* | Charlie runs browser/OS matrix |
+| Regression suite run | *(internal)* | per-change | *(never)* | Rex automates on every significant change |
+
+*Cadences trigger on session start. Cora checks the table and initiates if due.*
 
 ---
 

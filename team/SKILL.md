@@ -94,7 +94,8 @@ The goal is minimal orchestration overhead. This is a trigger, not a controller.
 
 <team_knowledge>
 Genesis complete. Team operational since 2026-01-31.
-Protocols: Task Intake, Risk-Based Strategy, Handoff Pattern, Security-First, Automation Default, Session Handoff.
+First iteration completed 2026-01-31: Session Start protocol, cadence table, stale marker fixes.
+Protocols: Session Start, Task Intake, Risk-Based Strategy, Handoff, Security-First, Automation Default, Session Handoff, Cadences.
 Validated by Clara. Challenged by Sam.
 </team_knowledge>
 

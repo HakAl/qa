@@ -259,6 +259,47 @@ Related: dispatch from engineering (2026-01-31, update-site-for-resumes)
 
 ## Open / Deferred
 
-- [ ] Test Windows NTFS rename atomicity (Git Bash `mv` vs PowerShell `Move-Item`)
+- [x] Test Windows NTFS rename atomicity (Git Bash `mv` vs PowerShell `Move-Item`) — **RESOLVED 2026-01-31**
 - [ ] First real cross-team dispatch (test with a concrete request)
 - [ ] Decide: should `/team status` show pending dispatches from other teams?
+
+---
+
+## NTFS Atomicity Test Results (2026-01-31)
+
+**Platform**: Windows NT-10.0-26200, MINGW64, Git Bash 5.2.37, Python 3.13.1
+**Bead**: _qa-ble (CLOSED)
+**Tested by**: QA & Compliance team (Cora, Sam, Clara)
+
+### Summary
+
+**PASS: Rename is atomic on this system for the dispatch protocol's use case.**
+
+The dispatch protocol writes to `tmp/` then renames to `new/` — a simple, same-volume, no-overwrite rename on NTFS. This is the one case where NTFS provides a strong atomicity guarantee.
+
+### Test Results
+
+| Test | Method | Result |
+|------|--------|--------|
+| Git Bash `mv` | Single file rename tmp→new | PASS |
+| Python `os.rename` | 10KB file with end marker | PASS (complete, marker intact) |
+| Stress test | 100 rapid renames | 100/100 PASS, 0 FAIL, 0 WARNINGS |
+| Concurrent race | 50 writes + aggressive polling reader | 50/50 complete reads, 0 partial |
+| Same-volume check | `os.stat().st_dev` comparison | PASS (same device ID) |
+
+### Key Findings
+
+1. **Simple rename (no overwrite) on same-volume NTFS is atomic.** This is the dispatch protocol's exact use case.
+2. **Git Bash `mv` maps through `msys-2.0.dll` → POSIX rename → MoveFileEx.** For same-volume no-overwrite, this is a metadata-only operation.
+3. **Python `os.rename` also maps to MoveFileEx.** Same guarantees.
+4. **`tmp/` and `new/` share the same volume** (verified by device ID match). This ensures the rename never falls back to copy+delete.
+
+### Constraint to Document
+
+**If `~/.team/dispatch/` is ever relocated such that `tmp/` and `new/` end up on different volumes, atomicity breaks.** This is unlikely since they share a parent directory, but teams should be aware. Cross-volume `MoveFileEx` falls back to copy+delete, which is NOT atomic.
+
+### Sources
+
+- [MoveFileEx atomicity on NTFS (Microsoft Forums)](https://learn.microsoft.com/en-us/archive/msdn-technet-forums/449bb49d-8acc-48dc-a46f-0760ceddbfc3)
+- [Atomic file rename on Windows (Stack Overflow)](https://ekalm.online/amp-https-stackoverflow.com/questions/167414/is-an-atomic-file-rename-with-overwrite-possible-on-windows)
+- [Atomic File Writes on Windows (antonymale.co.uk)](https://antonymale.co.uk/windows-atomic-file-writes.html)
