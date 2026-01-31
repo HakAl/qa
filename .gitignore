@@ -1,0 +1,28 @@
+# Build artifacts
+dist/
+*.tar.gz
+*.zip
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Editor files
+*.swp
+*.swo
+*~
+.idea/
+.vscode/
+
+.keys
+
+# Claude Code local settings
+.claude/settings.local.json
+
+# Playwright MCP
+.playwright-mcp/
+
+# Terminalizer artifacts (keep config.yml for reproducibility)
+demo-config.yml
+demo.yml
+*.cast
