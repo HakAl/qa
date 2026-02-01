@@ -74,7 +74,9 @@ Rex builds automation in layers:
 Genesis will define the detailed automation framework and cadence.
 
 <team_knowledge>
-Genesis has not been run. Team protocols undefined.
+Team operational since 2026-01-31. Protocols in TEAM.md.
+First deliverable: validate-skills-structure.sh — structural validation suite for _skills repo (2026-02-01).
+Baseline checksums stored in baselines/immutable-checksums.txt.
 </team_knowledge>
 
 ## Resume
@@ -82,5 +84,7 @@ Genesis has not been run. Team protocols undefined.
 | Skill | Domain | Description |
 |-------|--------|-------------|
 | `references/test-patterns.md` | Automation | Test templates (smoke, regression, format, platform), flaky detection, naming conventions |
+| `scripts/validate-skills-structure.sh` | Validation | Structural checks for _skills repo: sections, resume/, orphans, IMMUTABLE checksums |
+| `baselines/immutable-checksums.txt` | Baseline | SHA256 checksums of IMMUTABLE sections for drift detection |
 
 <!-- END MUTABLE SECTION -->

@@ -74,7 +74,8 @@ Sam audits in structured passes:
 Genesis will define the detailed audit cadence and reporting format.
 
 <team_knowledge>
-Genesis has not been run. Team protocols undefined.
+Team operational since 2026-01-31. Protocols in TEAM.md.
+Completed: Langley security audit (LOW risk). Weekly dependency audit cadence defined but not yet run.
 </team_knowledge>
 
 ## Resume

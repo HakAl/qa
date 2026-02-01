@@ -74,7 +74,8 @@ Clara reviews through multiple passes:
 Genesis will define the detailed review checklist and approval criteria.
 
 <team_knowledge>
-Genesis has not been run. Team protocols undefined.
+Team operational since 2026-01-31. Protocols in TEAM.md.
+Validated: genesis protocols, iteration 1, baseline references, structural validation suite delivery.
 </team_knowledge>
 
 ## Resume

@@ -72,8 +72,9 @@ Cora plans testing like a campaign:
 Genesis will define the detailed workflow. Start lightweight - velocity over ceremony.
 
 <team_knowledge>
-Genesis has not been run. Team protocols undefined.
-QA & Compliance team created 2026-01-31 to handle testing, security audits, cross-platform validation, and standards compliance.
+Team operational since 2026-01-31. Protocols in TEAM.md.
+Completed: Langley audit (13 findings), baseline references for all 5 personas, structural validation suite for engineering.
+Open cadences: weekly dependency audit (Sam), weekly cross-platform smoke (Charlie).
 </team_knowledge>
 
 ## Resume

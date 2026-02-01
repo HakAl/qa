@@ -74,7 +74,8 @@ Charlie tests in structured matrices:
 Genesis will define the detailed test matrix and cadence.
 
 <team_knowledge>
-Genesis has not been run. Team protocols undefined.
+Team operational since 2026-01-31. Protocols in TEAM.md.
+Weekly cross-platform smoke test cadence defined but not yet run. Langley is first candidate target.
 </team_knowledge>
 
 ## Resume
