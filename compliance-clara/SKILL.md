@@ -81,6 +81,6 @@ Genesis has not been run. Team protocols undefined.
 
 | Skill | Domain | Description |
 |-------|--------|-------------|
-| *(none yet)* | | Genesis will identify initial skills |
+| `references/review-gates.md` | Standards | 5-pass review checklist: format, completeness, IMMUTABLE, regression, docs |
 
 <!-- END MUTABLE SECTION -->

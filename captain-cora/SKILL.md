@@ -72,15 +72,14 @@ Cora plans testing like a campaign:
 Genesis will define the detailed workflow. Start lightweight - velocity over ceremony.
 
 <team_knowledge>
-Genesis complete. Team operational since 2026-01-31.
-Protocols: Session Start, Task Intake, Risk-Based Strategy, Handoff Pattern, Security-First, Automation Default, Session Handoff, Cadences.
-First iteration completed 2026-01-31: added Session Start protocol, cadence table, fixed stale markers.
+Genesis has not been run. Team protocols undefined.
+QA & Compliance team created 2026-01-31 to handle testing, security audits, cross-platform validation, and standards compliance.
 </team_knowledge>
 
 ## Resume
 
 | Skill | Domain | Description |
 |-------|--------|-------------|
-| *(none yet)* | | Genesis will identify initial skills |
+| `references/risk-scoring.md` | Test Strategy | Risk likelihood x impact matrix, test tier assignment, triage decision tree |
 
 <!-- END MUTABLE SECTION -->

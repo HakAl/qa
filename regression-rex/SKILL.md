@@ -81,6 +81,6 @@ Genesis has not been run. Team protocols undefined.
 
 | Skill | Domain | Description |
 |-------|--------|-------------|
-| *(none yet)* | | Genesis will identify initial skills |
+| `references/test-patterns.md` | Automation | Test templates (smoke, regression, format, platform), flaky detection, naming conventions |
 
 <!-- END MUTABLE SECTION -->

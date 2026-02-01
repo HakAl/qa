@@ -81,6 +81,6 @@ Genesis has not been run. Team protocols undefined.
 
 | Skill | Domain | Description |
 |-------|--------|-------------|
-| *(none yet)* | | Genesis will identify initial skills |
+| `references/dependency-audit-procedure.md` | Security | Step-by-step dependency scan: CVEs, supply chain, config, licenses |
 
 <!-- END MUTABLE SECTION -->

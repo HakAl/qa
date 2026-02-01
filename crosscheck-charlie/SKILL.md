@@ -81,6 +81,6 @@ Genesis has not been run. Team protocols undefined.
 
 | Skill | Domain | Description |
 |-------|--------|-------------|
-| *(none yet)* | | Genesis will identify initial skills |
+| `references/platform-matrix.md` | Cross-Platform | Browser/OS/device matrix, breakpoints, known gotchas, smoke checklist |
 
 <!-- END MUTABLE SECTION -->
